@@ -1,8 +1,11 @@
+import Layouts from "./components/Layouts/Layouts";
 
 function App() {
 
   return (
-    <div></div>
+    <div>
+      <Layouts />
+    </div>
   )
 }
 
