@@ -38,7 +38,7 @@ const Allfood = () => {
   };
 
   return (
-    <section className="pb-4">
+    <section className="pt-4 pb-4">
       <Container>
         <Row>
           <Col lg="6" md="6" sm="6" xs="12">

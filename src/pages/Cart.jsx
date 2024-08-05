@@ -16,7 +16,7 @@ const Cart = () => {
   const totalAmount = useSelector((state) => state.cart.totalAmount);
 
   return (
-    <section>
+    <section className="pt-4">
       <Container>
         <Row>
           <Col lg="12">

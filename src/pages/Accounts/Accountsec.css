@@ -1,0 +1,60 @@
+/* Sidebar.css */
+.sidebar-container {
+  display: flex;
+  transition: margin-left 0.3s ease;
+}
+
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: #333;
+  color: white;
+  transition: transform 0.3s ease;
+  transform: translateX(-250px);
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+.toggle-button {
+  background-color: #444;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.sidebar-content {
+  padding: 20px;
+}
+
+.sidebar-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-content ul li {
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.sidebar-content ul li:hover {
+  background-color: #555;
+}
+
+.content {
+  margin-left: 250px;
+  padding: 20px;
+}
+
+.sidebar-container.open .content {
+  margin-left: 250px;
+}
+
+.sidebar-container:not(.open) .content {
+  margin-left: 0;
+}

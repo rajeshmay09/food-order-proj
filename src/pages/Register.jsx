@@ -11,7 +11,7 @@ const Register = () => {
     e.preventDefault();
   };
   return (
-    <div>
+    <div className="pt-4 pb-4">
       <Container>
         <Row>
           <Col lg="6" md="6" sm="12" className="m-auto text-center">

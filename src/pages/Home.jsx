@@ -17,11 +17,18 @@ import networkImg from "../assets/images/network.png";
 import "../styles/hero-section.css";
 import "../styles/home.css";
 
+import categories from "../assets/fake-data/categories.js";
 import products from "../assets/fake-data/products.js";
 
 import ProductCard from "../components/UI/product-card/ProductCard.jsx";
 import TestimonialSlider from "../components/UI/slider/TestimonialSlider.jsx";
 import Category from "../components/UI/category/Category.jsx";
+import FeaturedProd from "../components/Home/FeaturedProd.jsx";
+import HighlightCategories from "../components/Home/HighlightCategories.jsx";
+import Testimonials from "../components/Home/Testimonials.jsx";
+import FeaturedStores from "../components/Home/FeaturedStores.jsx";
+import PromotionalOffer from "../components/Home/PromotionalOffer.jsx";
+
 //import Helmet from "../components/Helmet/Helmet.js";
 
 const featureData = [
@@ -42,6 +49,7 @@ const featureData = [
     desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, doloremque.",
   },
 ];
+const featuredProduct = products[0];
 
 const Home = () => {
   const [category, setCategory] = useState("ALL");
@@ -127,6 +135,21 @@ const Home = () => {
 
       <section className="pt-4">
         <Category />
+        <div className="container mx-auto">
+          <FeaturedProd product={featuredProduct} />
+        </div>
+        <div className="container mx-auto">
+          <HighlightCategories category={categories} />
+        </div>
+        <div className="container mx-auto">
+          <FeaturedStores />
+        </div>
+        <div className="container mx-auto mb-4">
+          <PromotionalOffer />
+        </div>
+        <div className="container mx-auto">
+          <Testimonials />
+        </div>
       </section>
 
       <section>
