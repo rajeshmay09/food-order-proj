@@ -13,33 +13,39 @@ export const productSlice = createSlice({
   name: "product",
   initialState,
   reducers: {
-    setProducts: (state, action) => {
+    setProducts(state, action){
       state.products = action.payload;
     },
     // Action to set a selected product
-    selectProduct: (state, action) => {
+    selectProduct(state, action){
       state.selectedProduct = action.payload;
     },
     // Action to set loading status
-    setLoading: (state) => {
+    setLoading(state){
       state.status = "loading";
     },
     // Action to set success status
-    setSuccess: (state) => {
+    setSuccess(state){
       state.status = "succeeded";
     },
     // Action to set error status and message
-    setError: (state, action) => {
+    setError(state, action){
       state.status = "failed";
       state.error = action.payload;
     },
-    setSelectedStore: (state, action) => {
+    setSelectedStore(state, action){
       state.selectedStoreId = action.payload; // Update the selected store ID
+    },
+    selectProductsByStores(state, action){
+      if(state.selectedStoreId){
+        state.products.filter
+      }
     },
   },
 });
 
 export const selectProductsByStore = (state) => {
+  console.log("from slice")
   if (state.product.selectedStoreId) {
     return state.product.products.filter(
       (product) => product.storeId === state.product.selectedStoreId

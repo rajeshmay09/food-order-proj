@@ -16,7 +16,6 @@ const Cart = () => {
   const toggleCart = () => {
     dispatch(toggle());
   };
-
   return (
     <div className="cart__container">
       <ListGroup className="cart">

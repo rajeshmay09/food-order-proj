@@ -1,22 +1,24 @@
 import { createSlice } from "@reduxjs/toolkit";
-import stores from "../../assets/fake-data/store";
+import storeslist from "../../assets/fake-data/store";
 
 const initialState = {
-  stores: stores, // Initial store data
+  storelist: storeslist, // Initial store data
   selectedStoreId: null, // Track the selected store
   status: "idle", // For loading state (optional)
   error: null, // For error handling (optional)
 };
 
-export const storeSlice = createSlice({
-  name: "store",
+export const storelistSlice = createSlice({
+  name: "storelist",
   initialState,
   reducers: {
-    setSelectedStore: (state, action) => {
+    setSelectedStore(state, action) {
+
       state.selectedStoreId = action.payload;
+      return state;
     },
     // Optional: Add a reducer to update store information if needed
-    updateStore: (state, action) => {
+    updateStore(state, action) {
       const { id, data } = action.payload;
       const storeIndex = state.stores.findIndex((store) => store.id === id);
       if (storeIndex !== -1) {
@@ -25,18 +27,14 @@ export const storeSlice = createSlice({
     },
   },
 });
-export const { setSelectedStore, updateStore } = storeSlice.actions;
 
-export default storeSlice.reducer;
+export const { setSelectedStore, updateStore } = storelistSlice.actions;
 
-export const selectSelectedStore = (state) => {
-  if (state.store.selectedStoreId) {
-    return state.store.stores.find(
-      (store) => store.id === state.store.selectedStoreId
-    );
+export default storelistSlice.reducer;
+
+export const selectSelectedStore = (state, storeId) => {
+  if (storeId) {
+    return state.storelist.find((store) => store.id === storeId);
   }
   return null; // Return null if no store is selected
-};
-
-// Selector to get all stores
-export const selectAllStores = (state) => state.store.stores;
+}

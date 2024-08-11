@@ -1,4 +1,4 @@
-const stores = [
+const storeslist = [
     {
       id: '1',
       name: 'Fresh Market',
@@ -36,5 +36,5 @@ const stores = [
     },
   ];
   
-  export default stores;
+  export default storeslist;
   

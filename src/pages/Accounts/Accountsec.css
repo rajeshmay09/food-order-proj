@@ -1,4 +1,31 @@
-/* Sidebar.css */
+
+.sidebar {
+  width: 200px;
+  background-color: #136a13;
+  color: #fff;
+  box-sizing: border-box;
+  position: absolute;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-left: 200px;
+  text-align: justify;
+}
+
+.sidebar a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.sidebar a:hover {
+  background-color: #2980b9;
+}
+/* Sidebar.css 
 .sidebar-container {
   display: flex;
   transition: margin-left 0.3s ease;
@@ -58,3 +85,4 @@
 .sidebar-container:not(.open) .content {
   margin-left: 0;
 }
+*/
