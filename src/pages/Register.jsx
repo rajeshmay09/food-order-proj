@@ -41,9 +41,9 @@ const Register = () => {
               Connect with your neighborhood
             </h2>
 
-            <p className="mt-4 leading-relaxed text-white/90">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi
-              nam dolorum aliquam, quibusdam aperiam voluptatum.
+            <p className="mt-4 leading-relaxed items-center text-white/90 bg-lime-950 rounded-full p-2 font-bold">
+              Join our satisfied customers in sharing their stories. See why
+              they keep coming back for more!.
             </p>
           </div>
         </section>
@@ -73,9 +73,9 @@ const Register = () => {
                 Connect with your neighborhood
               </h1>
 
-              <p className="mt-4 leading-relaxed text-gray-500">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Eligendi nam dolorum aliquam, quibusdam aperiam voluptatum.
+              <p className="mt-4 leading-relaxed text-white bg-lime-800 font-bold">
+                Join our satisfied customers in sharing their stories. See why
+                they keep coming back for more!
               </p>
             </div>
 

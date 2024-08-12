@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row,} from "reactstrap";
+import { Container, Row } from "reactstrap";
 import { Link } from "react-router-dom";
 
 import Grocery from "../../../assets/images/Grocery.jpg";
@@ -52,13 +52,13 @@ const categoryData = [
 
 const Category = () => {
   return (
-    <Container>
+    <Container className="mt-10">
       <Row>
-        <h2 className="text-3xl font-bold text-center mb-6">
+        <h2 className="text-3xl font-bold text-center mb-6 text-lime-800">
           "Your Neighborhood, Delivered: Everything You Need, Just Around the
           Corner."
         </h2>
-        <p className="text-xl font-bold text-center pb-6">
+        <p className="text-xl font-bold text-center pb-6 text-lime-800">
           "Bringing the Best of Your Community Right to Your Doorstep."
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -73,14 +73,21 @@ const Category = () => {
                 className="w-full h-40 object-cover"
               />
 
-              <div className="p-4 w-full truncate bg-gradient-to-t from-cream via-cream to-transparent">
-                <h6 className="text-xl font-semibold">{item.display}</h6>
+              <div className="p-4 w-full bg-gradient-to-t from-cream via-cream to-transparent">
+                <h6 className="text-xl font-semibold text-lime-800 truncate">
+                  {item.display}
+                </h6>
               </div>
             </div>
           ))}
         </div>
-        <div className=" mb-6 pt-6 text-center">
-          <Link to='/stores' className="text-3xl font-bold text-center border-solid border-gray-500 border no-underline text-black">Explore Stores</Link>
+        <div className="mt-4 mb-6 pt-8 text-center">
+          <Link
+            to="/stores"
+            className="text-3xl font-bold text-center no-underline text-white bg-lime-950 p-3 rounded-full hover:bg-lime-800"
+          >
+            Explore Stores
+          </Link>
         </div>
       </Row>
     </Container>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Container, Row, Col, ListGroup, ListGroupItem } from "reactstrap";
+import { Container, Row, Col} from "reactstrap";
 
 import featureImg01 from "../assets/images/Storeai.png";
 import featureImg02 from "../assets/images/Checklist.png";
@@ -7,8 +7,7 @@ import featureImg03 from "../assets/images/Colcheck.png";
 import foodCategoryImg01 from "../assets/images/hamburger.png";
 import foodCategoryImg02 from "../assets/images/pizza.png";
 import foodCategoryImg03 from "../assets/images/bread.png";
-import whyImg from "../assets/images/location.png";
-import networkImg from "../assets/images/network.png";
+
 
 import "../styles/hero-section.css";
 import "../styles/home.css";
@@ -20,8 +19,6 @@ import TestimonialSlider from "../components/UI/slider/TestimonialSlider.jsx";
 import Category from "../components/UI/category/Category.jsx";
 import HeroSection from "../components/Home/HeroSection.jsx";
 import Feature from "../components/UI/features/Feature.jsx";
-
-
 
 const featureData = [
   {
@@ -46,7 +43,6 @@ const featuredProduct = products[0];
 const Home = () => {
   const [category, setCategory] = useState("ALL");
   const [allProducts, setAllProducts] = useState(products);
-
 
   useEffect(() => {
     if (category === "ALL") {
@@ -88,23 +84,29 @@ const Home = () => {
         </Container>
       </section>
 
+      <div class="mt-8 w-full h-1px md:max-w-6xl mx-auto py-0.5 bg-lime-950"></div>
+
       <section className="container pt-6">
         <Category />
       </section>
 
+      <div class="mt-8 w-full h-1px md:max-w-6xl mx-auto py-0.5 bg-lime-950"></div>
+
       <section className="pt-8 pb-8">
         <Feature />
       </section>
-
-      <section className="pb-4 pt-4">
+      <div class="mt-8 w-full h-1px md:max-w-6xl mx-auto py-0.5 bg-lime-950"></div>
+      <section className="pb-4 pt-4 mt-4">
         <Container>
           <Row>
             <Col lg="12" className="text-center">
               <h2>Popular Foods</h2>
             </Col>
             <Col lg="12">
-              <div className="food__category d-flex align-items-center justify-content-center gap-4 
-              bg-gradient-to-r from-cream from-30% via-slate-100 via-40% to-cream to-70%">
+              <div
+                className="food__category d-flex align-items-center justify-content-center gap-4 
+              bg-gradient-to-r from-cream from-30% via-slate-100 via-40% to-cream to-70%"
+              >
                 <button
                   className={`all__btn  ${
                     category === "ALL" ? "foodBtnActive" : ""
@@ -144,38 +146,34 @@ const Home = () => {
               </div>
             </Col>
             {displayedProducts.map((item) => (
-              <Col lg="4" md="4" sm="6" xs="6" key={item.id} className="mt-5">
+              <Col lg="3" md="3" sm="6" xs="6" key={item.id} className="mt-5">
                 <ProductCard item={item} />
               </Col>
             ))}
           </Row>
         </Container>
       </section>
-
+      <div class="mt-8 w-full h-0.5px md:max-w-6xl mx-auto py-0.5 bg-lime-950 mb-12"></div>
       <section>
         <Container>
           <Row>
-            <Col lg="6" md="6">
-              <div className="testimonial ">
-                <h5 className="testimonial__subtitle mb-4">Testimonial</h5>
-                <h2 className="testimonial__title mb-4">
-                  What our <span>customers</span> are saying
-                </h2>
-                <p className="testimonial__desc">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Distinctio quasi qui minus quos sit perspiciatis inventore
-                  quis provident placeat fugiat!
-                </p>
-
-                <TestimonialSlider />
-              </div>
-            </Col>
-            <Col lg="6" md="6">
-              <img src={networkImg} alt="testimonial-img" className="w-100" />
-            </Col>
+            <TestimonialSlider />
           </Row>
         </Container>
       </section>
+      <div className="text-center pb-4 pt-8 md:pt-12">
+        <h1 className="font-bold break-normal text-3xl md:text-5xl text-lime-950">
+          DISCLAIMER
+        </h1>
+        <h1 className=" font-bold break-normal text-xl md:text-2xl pt-4 text-lime-950">
+          "Demo Website. Please note that our website is continually evolving to enhance your
+          experience. Updates and changes may occur at any time without prior
+          notice. We appreciate your understanding and encourage you to check
+          back regularly for the latest information and improvements. **Website is
+          not for the mobile screens, only few features have been modified for
+          mobile Screens.**"
+        </h1>
+      </div>
     </>
   );
 };

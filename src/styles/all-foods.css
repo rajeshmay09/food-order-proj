@@ -7,7 +7,6 @@
 }
 .search__widget input {
   border: none;
-  color: whitesmoke;
 }
 
 .search__widget input:focus {

@@ -43,9 +43,9 @@ const ProductList = () => {
       <Container>
         <Row>
           <Col lg="6" md="6" sm="6" xs="12">
-            <div className="search__widget flex items-center justify-between w-1/2 text-slate-50">
+            <div className="search__widget flex items-center justify-between w-1/2 text-lime-950">
               <input
-                className="bg-transparent"
+                className="bg-transparent text-lime-950"
                 type="text"
                 placeholder="I'm looking for...."
                 value={searchTerm}

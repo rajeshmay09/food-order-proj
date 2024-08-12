@@ -1,6 +1,6 @@
 import { NavLink, Link } from "react-router-dom";
 import { Container } from "reactstrap";
-import featureImg01 from "../../assets/images/Delivery.png";
+
 
 import "../../styles/Header.css";
 import { useSelector, useDispatch } from "react-redux";
@@ -57,16 +57,13 @@ const Header = () => {
 
   return (
     <header
-      className="header bg-gradient-to-r from-cream from-30% via-slate-100 via-40% to-cream to-70%"
+      className="header bg-gradient-to-r from-cream from-30% via-slate-100 via-40% to-cream to-70% z-50"
       ref={headerRef}
     >
       <Container>
         <div className="nav__wrapper flex justify-between items-center ">
           <div className="logo relative">
-            <div className="animated-text absolute bottom-9 end-1 max-w-10 max-h-10">
-              <img src={featureImg01} />
-            </div>
-            <h5 className="animated-text bg-gradient-to-r from-cream from-30% via-gray-50 via-40% to-cream to-70% shadow-xl">CLICS LOCAL</h5>
+            <h5 className="bg-lime-950 text-white rounded-ss-3xl rounded-ee-3xl p-2 shadow-xl">CLICS LOCAL</h5>
           </div>
           <div className="navigation" ref={menuRef} onClick={toggleMenu}>
             <div
@@ -90,7 +87,9 @@ const Header = () => {
           <div className="nav__right flex items-center gap-4">
             <span className="cart__icon" onClick={toggleCart}>
               <i class="ri-shopping-basket-line"></i>
-              <span className="cart__badge animated-text ">{totalQuantity}</span>
+              <span className="cart__badge animated-text ">
+                {totalQuantity}
+              </span>
             </span>
 
             <div class="dropdown">
@@ -121,3 +120,7 @@ const Header = () => {
 };
 
 export default Header;
+
+//<div className="animated-text absolute bottom-9 end-1 max-w-10 max-h-10">
+//<img src={featureImg01} />
+//</div>

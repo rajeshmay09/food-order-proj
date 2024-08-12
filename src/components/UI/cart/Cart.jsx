@@ -27,7 +27,7 @@ const Cart = () => {
 
         <div className="cart__item-list">
           {cartProducts.length === 0 ? (
-            <h6 className="text-center mt-5">No item added to the cart</h6>
+            <h6 className="text-center mt-5 text-lime-950">No item added to the cart</h6>
           ) : (
             cartProducts.map((item, index) => (
               <CartItems item={item} key={index} />
@@ -40,7 +40,7 @@ const Cart = () => {
             Subtotal : <span>${totalAmount}</span>
           </h6>
           <button>
-            <Link to="/checkout" onClick={toggleCart}>
+            <Link to="/checkout" className="no-underline" onClick={toggleCart}>
               Checkout
             </Link>
           </button>
