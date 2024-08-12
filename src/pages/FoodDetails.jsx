@@ -115,23 +115,24 @@ const FoodDetails = () => {
               <div className="tab__form mb-3">
                 <div className="review pt-5">
                   <p className="user__name mb-0">Jhon Doe</p>
-                  <p className="user__email">jhon1@gmail.com</p>
+
                   <p className="feedback__text">great product</p>
                 </div>
 
                 <div className="review">
                   <p className="user__name mb-0">Jhon Doe</p>
-                  <p className="user__email">jhon1@gmail.com</p>
+
                   <p className="feedback__text">great product</p>
                 </div>
 
                 <div className="review">
                   <p className="user__name mb-0">Jhon Doe</p>
-                  <p className="user__email">jhon1@gmail.com</p>
+
                   <p className="feedback__text">great product</p>
-                </div>
-                <form className="form" onSubmit={submitHandler}>
+                </div> 
+                <form className="form bg-gradient-to-r from-cream from-30% via-slate-100 via-40% to-cream to-70%" onSubmit={submitHandler}>
                   <div className="form__group">
+                    <label className="text-lime-950 text-xl font-bold">Name:</label>
                     <input
                       type="text"
                       placeholder="Enter your name"
@@ -141,6 +142,7 @@ const FoodDetails = () => {
                   </div>
 
                   <div className="form__group">
+                    <label className="text-lime-950 text-xl font-bold">Email:</label>
                     <input
                       type="text"
                       placeholder="Enter your email"
@@ -150,6 +152,7 @@ const FoodDetails = () => {
                   </div>
 
                   <div className="form__group">
+                    <label className="text-lime-950 text-xl font-bold">Review:</label>
                     <textarea
                       rows={5}
                       type="text"
@@ -159,7 +162,7 @@ const FoodDetails = () => {
                     />
                   </div>
 
-                  <button type="submit" className="addTOCart__btn">
+                  <button type="submit" className="bg-lime-950 text-white p-3 rounded-full">
                     Submit
                   </button>
                 </form>

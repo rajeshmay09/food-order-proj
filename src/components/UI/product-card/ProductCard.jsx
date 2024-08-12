@@ -41,7 +41,7 @@ const ProductCard = (props) => {
         </p>
         <div className="flex items-center">
           <p className="text-lg font-semibold text-lime-800 cursor-auto my-3 no-underline">
-            {price}
+            ${price}
           </p>
 
           <p class="text-sm text-lime-800 cursor-auto ml-2 line-through mb-0">

@@ -28,6 +28,7 @@ const categories = [
     description: "Find your next read.",
     image: product_04_image_03,
   },
+  
 ];
 
 export default categories;
