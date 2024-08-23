@@ -32,7 +32,7 @@ const Cart = () => {
           ) : (
             <div class="flex-col md:flex-col justify-between flex gap-4 items-start mx-4 py-12">
               {cartItems.map((item) => (
-                <div class="flex bg-white rounded-lg shadow dark:bg-gray-800 flex-col md:flex-row" key={item.id}>
+                <div class="flex bg-white rounded-xl border-8 border-cream shadow-xl  flex-col md:flex-row" key={item.id}>
                   <div class="relative w-full md:w-48 flex justify-center items-center">
                     <img
                       src={item.image01}
@@ -42,14 +42,14 @@ const Cart = () => {
                   </div>
                   <div class="flex-auto p-6">
                     <div class="flex flex-wrap">
-                      <h1 class="flex-auto text-xl font-semibold dark:text-gray-50">
+                      <h1 class="flex-auto text-xl font-semibold text-lime-950">
                         {item.title}
                       </h1>
-                      <div class="text-xl font-semibold text-gray-500 dark:text-gray-300">
+                      <div class="text-xl font-semibold text-lime-950 ">
                       {item.price}
                       </div>
 
-                      <div class="flex justify-between w-full mt-2 text-sm font-medium text-gray-500 dark:text-gray-300">
+                      <div class="flex justify-between w-full mt-2 text-sm font-medium text-lime-950">
                         <p>In stock</p>
                         <div className="space-x-2">
                           <button
